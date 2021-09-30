@@ -1,0 +1,176 @@
+body{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-title{
+    font-family: 'Press Start 2P', cursive;
+    font-size:2rem;
+    display: none;
+    
+}
+/* keyframes */
+@keyframes margin-change_bt1{
+    0%{
+        margin-left:-5rem;
+    }
+    50%{
+        margin-left:0;
+    }
+    100%{
+        margin-left:5rem;
+    }
+}
+@keyframes margin-change_bt2{
+    0%{
+        margin-left:5rem;
+    }
+    50%{
+        margin-left:0;
+    }
+    100%{
+        margin-left:-5rem;
+    }
+}
+@keyframes gradient_change{
+    0%{
+        background:linear-gradient(to right,#2A0944,#3B185F,#A12568,#FEC260);
+    }
+    50%{
+        background:linear-gradient(to right,#FEC260,#A12568,#3B185F,#2A0944);
+    }
+    100%{
+        background:linear-gradient(to right,#A12568,#3B185F,#2A0944,#FEC260);
+    }
+}
+@keyframes change_size{
+    0%{
+        padding:10rem;
+    }
+    50%{
+        padding:5rem;
+    }
+    100%{
+        padding:10rem;
+    }
+}
+@keyframes balls_animation_1{
+    0%{
+        display: inline-block;
+        bottom:5rem;
+    }
+    25%{
+        bottom:25rem;
+    }
+    50%{
+        bottom:30rem;
+        left:30rem;
+    }
+    100%{
+        display: none;
+        bottom:35rem;
+        left:20rem;
+    }
+}
+@keyframes balls_animation_2{
+    0%{
+        display: inline-block;
+        bottom:5rem;
+    }
+    25%{
+        bottom:25rem;
+    }
+    50%{
+        bottom:30rem;
+        right:30rem;
+    }
+    100%{
+        display: none;
+        bottom:35rem;
+        right:20rem;
+    }
+}
+.first-button{
+    margin-left:0rem;
+    animation-name: margin-change_bt1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+.second-button{
+    margin-left:0rem;
+    animation-name: margin-change_bt2;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.side-shape{
+    position: absolute;
+    text-align: center;
+    padding:10rem;
+    top:0;
+    right:0;
+    background:linear-gradient(#FAFF00,#FF3F00,#8E2657) ;
+    clip-path: circle(50% at 75% 32%);
+    opacity: 0.75;
+    animation-name: change_size;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: none;
+}
+.image-logo{
+    position: absolute;
+}
+
+nav{
+    color:whitesmoke;
+    background:linear-gradient(to right,#2A0944,#3B185F,#A12568,#FEC260);
+    animation-duration: 5s;
+    animation-name: gradient_change;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.sample1{
+    position: absolute;
+    display: inline-block;
+    width:10rem;
+    left:2rem;
+    bottom:4rem;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 5px 1px 50px red;
+    background-color: #3D2C8D;
+    animation-name: balls_animation_1;
+    animation-duration: 5s;
+    animation-fill-mode:both;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    opacity:0.75;
+    display:none;
+}
+.sample2{
+    position: absolute;
+    display: inline-block;
+    width:10rem;
+    bottom:4rem;
+    right:0;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 5px 1px 50px red;
+    background-color: #3D2C8D;
+    animation-name: balls_animation_2;
+    animation-duration: 5s;
+    animation-fill-mode:both;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    opacity:0.75;
+    display: none;
+}
