@@ -1,0 +1,304 @@
+body{
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-title{
+    font-family: 'Press Start 2P', cursive;
+    font-size:2rem;
+    display: none;
+    
+}
+/* keyframes */
+@keyframes margin-change_bt1{
+    0%{
+        margin-left:-5rem;
+    }
+    50%{
+        margin-left:0;
+    }
+    100%{
+        margin-left:5rem;
+    }
+}
+@keyframes margin-change_bt2{
+    0%{
+        margin-left:5rem;
+    }
+    50%{
+        margin-left:0;
+    }
+    100%{
+        margin-left:-5rem;
+    }
+}
+@keyframes gradient_change{
+    0%{
+        background:linear-gradient(to right,#2A0944,#3B185F,#A12568,#FEC260);
+    }
+    50%{
+        background:linear-gradient(to right,#FEC260,#A12568,#3B185F,#2A0944);
+    }
+    100%{
+        background:linear-gradient(to right,#A12568,#3B185F,#2A0944,#FEC260);
+    }
+}
+@keyframes change_size{
+    0%{
+        padding:10rem;
+    }
+    50%{
+        padding:5rem;
+    }
+    100%{
+        padding:10rem;
+    }
+}
+/* @keyframes balls_animation_1{
+    0%{
+        display: inline-block;
+        bottom:5rem;
+    }
+    25%{
+        bottom:25rem;
+    }
+    50%{
+        bottom:30rem;
+        left:30rem;
+    }
+    100%{
+        display: none;
+        bottom:35rem;
+        left:20rem;
+    }
+/* } */
+/* @keyframes balls_animation_2{
+    0%{
+        display: inline-block;
+        bottom:5rem;
+    }
+    25%{
+        bottom:25rem;
+    }
+    50%{
+        bottom:30rem;
+        right:30rem;
+    }
+    100%{
+        display: none;
+        bottom:35rem;
+        right:20rem;
+    }
+} */ 
+@keyframes spin{
+    from {
+        transform: rotate(30deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}
+@keyframes spin2{
+    from{
+        transform: rotate(70deg);
+    }
+    to{
+        transform: rotate(150deg);
+    }
+}
+/* .first-button{
+    margin-left:0rem;
+    animation-name: margin-change_bt1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+.second-button{
+    margin-left:0rem;
+    animation-name: margin-change_bt2;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+} */
+
+.side-shape{
+    position: absolute;
+    text-align: center;
+    padding:10rem;
+    top:0;
+    right:0;
+    background:linear-gradient(#FAFF00,#FF3F00,#8E2657) ;
+    clip-path: circle(50% at 75% 32%);
+    opacity: 0.75;
+    animation-name: change_size;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: none;
+}
+.image-logo{
+    position: absolute;
+}
+
+nav{
+    color:whitesmoke;
+    background:linear-gradient(to right,#2A0944,#3B185F,#A12568,#FEC260);
+    animation-duration: 5s;
+    animation-name: gradient_change;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+/* .flower1{
+    position: absolute;
+    display: inline-block;
+    width:10rem;
+    left:2rem;
+    bottom:4rem;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 5px 1px 50px red;
+    background-color: #3D2C8D;
+    animation-name: balls_animation_1;
+    animation-duration: 5s;
+    animation-fill-mode:both;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    opacity:0.75;
+    display:none;
+}
+.flower2{
+    position: absolute;
+    display: inline-block;
+    width:10rem;
+    bottom:4rem;
+    right:0;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 5px 1px 50px red;
+    background-color: #3D2C8D;
+    animation-name: balls_animation_2;
+    animation-duration: 5s;
+    animation-fill-mode:both;
+    animation-timing-function:ease;
+    animation-iteration-count: infinite;
+    opacity:0.75;
+    display: none;
+} */
+
+.flower1:before {
+	background-color: brown;
+	border-radius: 10px 10px 10px 10px;
+	content: "";
+	display: block;
+	height: 20px;
+	left: 98px;
+	position: absolute;
+	top: 95px;
+	width: 20px;
+	z-index: 101;
+}
+.flower2:before{
+    background-color: brown;
+	border-radius: 10px 10px 10px 10px;
+	content: "";
+	display: block;
+	height: 20px;
+	left: 98px;
+	position: absolute;
+	top: 95px;
+	width: 20px;
+	z-index: 101;
+}
+.flower1{
+    display:none;
+    animation-name:spin;
+    animation-duration: 3s
+    ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+.flower2{
+    display: none;
+    animation-name : spin2;
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+
+}
+.f1wing1,.f1wing2,.f1wing3,.f1wing4,.f1wing5,.f1wing6,.f1wing7,.f1wing8{
+    z-index: 99;
+	position: absolute;
+	display: none;
+	top: 95px;
+	left: 0px;
+	width: 100px;
+	height: 20px;
+	border-radius: 500px 500px 500px 500px/ 100px 100px 100px 100px;
+	background-color: yellow;
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+
+}
+.f2wing1,.f2wing2,.f2wing3,.f2wing4,.f2wing5,.f2wing6,.f2wing6,.f2wing7,.f2wing8{
+    z-index: 99;
+	position: absolute;
+	display: none;
+	top: 95px;
+	left: 0px;
+	width: 100px;
+	height: 20px;
+	border-radius: 500px 500px 500px 500px/ 100px 100px 100px 100px;
+	background-color: yellow;
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+	transform: rotate(0deg);
+
+}
+.f1wing2,.f2wing2{
+    transform: rotate(45deg);
+    left:17px;
+    top:53px;
+}
+.f1wing3,.f2wing3{
+    transform: rotate(90deg);
+    left: 59px;
+	top: 37px;
+}
+.f1wing4,.f2wing4{
+    transform: rotate(135deg);
+    left: 100px;
+	top: 56px;
+}
+.f1wing5,.f2wing5{
+    transform: rotate(180deg);
+    left: 114px;
+	top: 98px;
+}
+.f1wing6,.f2wing6{
+    transform: rotate(225deg);
+    left: 98px;
+	top: 139px;
+}
+.f1wing7,.f2wing7{
+    transform: rotate(270deg);
+    left:57px;
+    top:154px;
+}
+.f1wing8,.f2wing8{
+    transform: rotate(315deg);
+    left:16px;
+    top:136px;
+}
